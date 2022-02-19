@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;700;800&display=swap');
+:root {
+  --blue: hsl(207, 26%, 17%);
+  --white: hsl(0, 0%, 98%);
+}
+
+body.light {
+  --background-color: var(--white);
+  --text-color: var(--blue);
+  --font-weight: 400;
+  --element-color: hsl(0, 0%, 100%);
+}
+body.dark {
+  --background-color: var(--blue);
+  --text-color: var(--white);
+  --font-weight: 500;
+  --element-color: hsl(209, 23%, 22%);
+}
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
+}
+.App{
+  font-family: 'Nunito Sans';
+  font-size: 14px;
+  color: var(--element-color);
+}
+
+.nav{
+  background: var(--element-color);
+  font-weight: 800;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw ;  
+  
+}
+
+.nav a,
+.nav a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 24px;  
+}
+
+.nav span{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.theme{
+  display: flex;
+  align-items: center;
+}
+
+.countriesList{
+  margin: 50px 0;
+  padding: 50px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: scroll;
+}
+
+.countrieImg{
+  height: 50%;
+  background-color: var(--element-color);
+}
+.CardDesc  {
+ padding: 20px;
+ height: 50%;
+ color: var(--text-color);
+ background-color: var(--element-color);
+}
+
+.CardDesc h3{
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.CardDesc h6{
+  font-weight: 700;
+}
+
+.CardDesc span{
+  font-weight: 300;
+}
+
+.card {
+  border: 0;
+}
