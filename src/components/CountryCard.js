@@ -11,7 +11,7 @@ function CountryCard({ srcImg ,country, population, region, capital }) {
         <div>
         <Card
           style={{
-            width: "16rem",
+            width: "15vw",
             height: "350px",
             margin: "40px",
             position: "relative",
