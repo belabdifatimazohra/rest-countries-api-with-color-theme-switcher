@@ -107,8 +107,9 @@ body {
   color: var(--text-color);
   border: 0;
   width: 450px;
-  height: 7vh;
+  height: 6vh;
   padding-left: 60px;
+  border-radius: 3px;
 }
 
 input:focus {
