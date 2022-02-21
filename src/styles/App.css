@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;700;800&display=swap");
 :root {
   --blue: hsl(207, 26%, 17%);
   --white: hsl(0, 0%, 98%);
@@ -22,42 +22,41 @@ body {
   font-weight: var(--font-weight);
   transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
 }
-.App{
-  font-family: 'Nunito Sans';
+.App {
+  font-family: "Nunito Sans";
   font-size: 14px;
   color: var(--element-color);
 }
 
-.nav{
+.nav {
   background: var(--element-color);
   font-weight: 800;
   height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3vw ;  
-  
+  padding: 0 3vw;
 }
 
 .nav a,
 .nav a:hover {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 24px;  
+  font-size: 24px;
 }
 
-.nav span{
+.nav span {
   font-size: 20px;
   font-weight: 600;
   padding: 10px;
 }
 
-.theme{
+.theme {
   display: flex;
   align-items: center;
 }
 
-.countriesList{
+.countriesList {
   padding: 20px;
   max-width: 100%;
   flex-wrap: wrap;
@@ -65,32 +64,33 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 100vh;
   background-attachment: scroll;
 }
 
-.countrieImg{
+.countrieImg {
   height: 50%;
   background-color: var(--element-color);
 }
-.CardDesc  {
- padding: 20px;
- height: 50%;
- color: var(--text-color);
- background-color: var(--element-color);
+.CardDesc {
+  padding: 20px;
+  height: 50%;
+  color: var(--text-color);
+  background-color: var(--element-color);
 }
 
-.CardDesc h3{
+.CardDesc h3 {
   font-size: 16px;
   font-weight: 800;
 }
 
-.CardDesc h6{
+.CardDesc h6 {
   font-weight: 700;
 }
 
-.CardDesc span{
+.CardDesc span {
   font-weight: 300;
 }
 
@@ -99,29 +99,28 @@ body {
 }
 
 /* Search */
-.search-container{
+.search-container {
   margin: 3% 4%;
 }
-.search-container input{
+.search-container input {
   background-color: var(--element-color);
   color: var(--text-color);
   border: 0;
-  width: 25vw;
+  width: 450px;
   height: 7vh;
   padding-left: 60px;
-
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
-::placeholder { 
+::placeholder {
   color: var(--text-color);
   font-size: 14px;
-  opacity: 1; 
+  opacity: 1;
 }
 
-.svg-icon{
+.svg-icon {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -129,3 +128,9 @@ input:focus {
   fill: var(--text-color);
 }
 
+/* Mobile style */
+@media screen and (max-width: 600px) {
+  .svg-icon {
+    margin: 10px;
+  }
+}
