@@ -11,7 +11,6 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Search />
         <Routes>
           <Route exact path="/" element= {<CountryList />} />         
           <Route path="/search/:search" element= {<Search />}/>
