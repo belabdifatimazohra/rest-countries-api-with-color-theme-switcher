@@ -9,10 +9,12 @@ function CountryList() {
   // country search state
   const [search, setSearch] = useState("");
 
-  const countries = useGetCountriesQuery({ skip: search !== '' })
-  const countriesByName = useGetCountryByNameQuery(search, { skip: search === "" })
-
-  const countryData = search === "" ? countries.data : countriesByName.data
+  const countries = useGetCountriesQuery({ skip: search !== "" });
+  const countriesByName = useGetCountryByNameQuery(search, {
+    skip: search === "",
+  });
+  // Update the countries list
+  const countryData = search === "" ? countries.data : countriesByName.data;
 
   return (
     <div>
