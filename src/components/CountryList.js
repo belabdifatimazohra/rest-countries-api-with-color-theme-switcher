@@ -1,22 +1,18 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
-import { useGetCountriesQuery ,useGetCountryByNameQuery} from "../redux/services/ApiProvider";
+import {
+  useGetCountriesQuery,
+  useGetCountryByNameQuery,
+} from "../redux/services/ApiProvider";
 
 function CountryList() {
+  // country search state
+  const [search, setSearch] = useState("");
 
-    // country search state 
-  const [search, setSearch] = useState();
-  let countryData  = useGetCountriesQuery().data
-  // countryData =  search === "" ?  useGetCountriesQuery().data : useGetCountryByNameQuery(search).data
-  console.log("search: ", search);
-  console.log("CountryData ", countryData);
-//   useEffect(()=> {
-//     if(search === "" ){
-//     countryData = useGetCountriesQuery().data 
-//     return
+  const countries = useGetCountriesQuery({ skip: search !== '' })
+  const countriesByName = useGetCountryByNameQuery(search, { skip: search === "" })
 
-//     } //: useGetCountryByNameQuery(search).data
-//   }, []);
+  const countryData = search === "" ? countries.data : countriesByName.data
 
   return (
     <div>
